@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     CategoriasModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ConfirmationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

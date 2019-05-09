@@ -7,20 +7,27 @@ import {InputTextModule} from 'primeng/inputtext';
 import {TableModule} from 'primeng/table';
 import {TooltipModule} from 'primeng/tooltip';
 import {ToastModule} from 'primeng/toast';
-import { MessageService } from 'primeng/api';
+import { MessageService, ConfirmationService } from 'primeng/api';
+import { FormsModule } from '@angular/forms';
+import { ConfirmDialogModule} from 'primeng/confirmdialog';
+import { CategoriasCadastroComponent } from './categorias-cadastro/categorias-cadastro.component';
+
 
 @NgModule({
-  declarations: [PesquisaComponent],
+  declarations: [PesquisaComponent, CategoriasCadastroComponent],
   imports: [
     CommonModule,
     ButtonModule,
     InputTextModule,
     TableModule,
     TooltipModule,
-    ToastModule
+    ToastModule,
+    FormsModule,
+    ConfirmDialogModule
   ],
   exports: [
-    PesquisaComponent
+    PesquisaComponent,
+    CategoriasCadastroComponent
 ],
 providers: [
   CategoriasService,
