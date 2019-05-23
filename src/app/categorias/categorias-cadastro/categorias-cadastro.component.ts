@@ -3,7 +3,7 @@ import { MessageService } from 'primeng/api';
 import { CategoriasService } from './../categorias.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-categorias-cadastro',
@@ -18,6 +18,7 @@ export class CategoriasCadastroComponent implements OnInit {
     private service: CategoriasService,
     private messageService: MessageService,
     private rota: ActivatedRoute
+  //  private rotaP: Router
   ) { }
 
   ngOnInit() {
@@ -58,6 +59,7 @@ salvar(form: FormControl) {
   }else{
     this.inserir(form);
   }
+
 }
 
 get editando(){
