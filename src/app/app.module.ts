@@ -1,3 +1,5 @@
+import { ProdutosCadastroComponent } from './produtos/produtos-cadastro/produtos-cadastro.component';
+import { ProdutosModule } from './produtos/produtos.module';
 import { CidadesModule } from './cidades/cidades.module';
 import { CidadesCadastroComponent } from './cidades/cidades-cadastro/cidades-cadastro.component';
 import { ButtonModule } from 'primeng/button';
@@ -19,7 +21,9 @@ const rotas: Routes = [
   {path: 'categorias/novo', component: CategoriasCadastroComponent},
   {path: 'categorias/:id', component: CategoriasCadastroComponent},
   {path: 'cidades/novo', component: CidadesCadastroComponent},
-  {path: 'cidades/:id', component: CidadesCadastroComponent}
+  {path: 'cidades/:id', component: CidadesCadastroComponent},
+  {path: 'produtos/:id', component: ProdutosCadastroComponent},
+  {path: 'produtos/novo', component: ProdutosCadastroComponent}
 ];
 
 @NgModule({
@@ -27,14 +31,15 @@ const rotas: Routes = [
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    CategoriasModule,
-    CidadesModule,
-    HttpClientModule,
-    SidebarModule,
-    ButtonModule,
-    RouterModule.forRoot(rotas)
+      BrowserModule,
+      BrowserAnimationsModule,
+      CategoriasModule,
+      CidadesModule,
+      ProdutosModule,
+      HttpClientModule,
+      SidebarModule,
+      ButtonModule,
+      RouterModule.forRoot(rotas)
   ],
   providers: [
     ConfirmationService
